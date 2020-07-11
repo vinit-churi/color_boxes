@@ -8,7 +8,7 @@ export default class Box extends Component{
                 <div className='container'>
                     {this.props.amount.map((color,index)=> {
                         return (
-                            <div id ={`pallet${index}`} className='single' style={{backgroundColor: color}} >
+                            <div id ={`pallet${index}`} className='single' style={{backgroundColor: color}} onClick={() => this.props.replaceColor(index)}>
                                 <p>{color}</p>
                                 <p>{index}</p>
                             </div>
