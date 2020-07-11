@@ -6,9 +6,11 @@ export default class Box extends Component{
         return(
             <div className='box'>
                 <div className='container'>
-                    {this.props.amount.map((n)=> {
+                    {this.props.amount.map((color,index)=> {
                         return (
-                            <div className='single' style={{backgroundColor: this.props.changeColor()}}>
+                            <div id ={`pallet${index}`} className='single' style={{backgroundColor: color}} >
+                                <p>{color}</p>
+                                <p>{index}</p>
                             </div>
                         )
                     })}

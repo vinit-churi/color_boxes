@@ -2,9 +2,17 @@
     height:100px;
     width:100px;
     background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    flex-direction: column;
 }
 
 .container{
     display: flex;
     flex-wrap: wrap;
+}
+.single{
+    /* background-color: black !important; */
 }
