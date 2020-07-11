@@ -18,20 +18,14 @@ export default class ColorPallet extends Component{
     storeColor(){
         this.setState((currState)=>(
             {
-                boxes: currState.boxes.map(()=> (
-                    this.colorGenerator()   
-                ))
+                boxes: currState.boxes.map(()=> this.colorGenerator())
             }
         ))
     }
     replaceColor(index){
         const random = this.colorGenerator();
-        // console.log(`this is index ${index} will be assigned ${random}`)
-        // console.log([...this.state.boxes].splice(index,1,random));
         let items = [...this.state.boxes]
         items.splice(index,1,random)
-        // console.log(items)
-
         this.setState({boxes: items});
     }
     render(){
